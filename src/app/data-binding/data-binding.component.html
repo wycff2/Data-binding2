@@ -1,0 +1,15 @@
+
+<h2 style="text-align: center;">Data Binding in Angular</h2><hr/>
+<input type="checkbox" [(ngModel)]="isshowProductDetails">{{isshowProductDetails? 'Show Product':'Hide product'}}
+
+<div class="product" [hidden]="isshowProductDetails">
+
+    <p>Product Name:{{productName}}</p>
+    <p>Brand:{{brand}}</p>
+    <p>Price:{{price}}</p>
+    <p>Quantity:{{qty}}</p>
+
+</div>
+<div>
+<app-image-binding></app-image-binding>  
+</div>

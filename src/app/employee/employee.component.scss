@@ -1,0 +1,40 @@
+.emp-container{
+width: 600px;
+margin: 40px;
+padding: 20;
+.emp-form{
+border:1px solid #721ea3;
+padding: 20;
+background-color:  #84af33;
+}
+h4{
+margin: 10;
+padding: 10;
+padding-bottom: 10px;
+}
+.emp-list{
+    margin-top: 20px;
+    background-color:  #5f97a8;
+    .table-header{
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        h4{
+            flex: 1;
+        }
+        input{
+            height: 20;
+            width: 200;
+            border-radius: 4px;
+            padding:5px;
+
+
+        }
+    }
+}
+
+}
+
+
+
+

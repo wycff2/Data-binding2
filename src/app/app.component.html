@@ -1,0 +1,34 @@
+<!--<h4>{{title}}</h4>-->
+<h3>Build in Directive</h3>
+<hr>
+<div>
+    <select [(ngModel)]="rc">
+        <option value="emp">Employee Component</option>
+        <option value="db">Data Component</option>
+        <option value="eb">Event Binding</option>
+        <option value="bp">Build in Pipe Component</option>
+        </select><br/> <br/>
+    
+    
+    
+   <div [ngSwitch]="rc">
+   <div *ngSwitchCase="'emp'">
+    <app-employee></app-employee>
+</div>
+    <div *ngSwitchCase="'db'">
+        <app-data-binding></app-data-binding>
+    </div>
+        <div *ngSwitchCase="'eb'">
+
+            <app-event-binding></app-event-binding>
+        </div>
+            <div *ngSwitchCase="'bp'">
+            <app-built-in-pipe></app-built-in-pipe>
+        </div>
+        <div *ngSwitchDefault>
+            <app-employee></app-employee>
+        </div>
+</div>
+</div>
+
+

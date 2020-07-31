@@ -1,0 +1,43 @@
+<div class="emp-container">
+<div class="emp-form">
+    <h4>Employee Form</h4>
+    Name: <input type="text" [(ngModel)]="name"><br><br/>
+    Department: <input type="text" [(ngModel)]="dept"><br><br/><!----Tw0-way-data-binding-->
+    Salary: <input type="text" [(ngModel)]="sal"><br><br/>
+
+<button (click)="addEmployee()">Add Employee</button>&nbsp;&nbsp;
+<button (click)="updateEmp()">Update Employee</button>
+
+</div>
+<div class="emp-list">
+    <div class="table-header">
+    <h4>Employee List</h4>
+    <div><input type="text" placeholder="Search" [(ngModel)]= "searchtext"></div>
+    </div>
+
+    <table border cellspacing="0" cellpadding="5" style="width: 100%;">
+        <thead>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Joining Date</th>
+            <th>Actions</th>
+            </thead>
+
+            <tbody>
+             <tbody>
+             <tr *ngFor="let list of employeeList | filter:searchtext; let inx =index;">
+                <!---- <td>{{list.name|uppercase}}</td>----pipe------->
+                 <td>{{list.name +inx | titlecase}}</td>
+                 <td>{{list.dept|uppercase}}</td>
+                 <td>{{list.sal|currency:'USD'}}</td>
+                 <td>{{list.JoiningDate|date:'fullDate'}}</td>
+<td>
+<a href="javscript:void(0)" (click)= "onedit(list,inx)"> Edit</a> &nbsp;&nbsp;
+<a href="javscript:void(0)" (click)= "onDelete(inx)"> Delete</a>
+</td>   
+ </tr>
+ </tbody>
+    </table>
+    </div>
+</div>
